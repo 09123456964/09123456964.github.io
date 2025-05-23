@@ -1,0 +1,187 @@
+‏<!DOCTYPE html>
+‏<html lang="fa" dir="rtl">
+‏<head>
+‏    <meta charset="UTF-8">
+‏    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+‏    <title>[Your Name] | مهندس صنایع و مدیر عملیات</title>
+‏    <script src="https://cdn.tailwindcss.com"></script>
+‏    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+‏    <style>
+‏        @font-face {
+‏            font-family: 'IranSans';
+‏            src: url('https://cdn.jsdelivr.net/gh/rastikerdar/vazir-font@v30.1.0/dist/Vazir-Regular.woff') format('woff');
+        }
+        
+‏        @font-face {
+‏            font-family: 'Nastaliq';
+‏            src: url('https://cdn.jsdelivr.net/gh/rastikerdar/persian-fonts@master/dist/Far.Nastaliq/Webfonts/far-nastaliq.woff') format('woff');
+        }
+        
+‏        body {
+‏            font-family: 'IranSans', sans-serif;
+‏            color: #2D2D2D;
+‏            scroll-behavior: smooth;
+        }
+        
+‏        .nastaliq {
+‏            font-family: 'Nastaliq', serif;
+‏            line-height: 2;
+        }
+        
+‏        .hero-gradient {
+‏            background: linear-gradient(135deg, #08C7B1 0%, #006B67 100%);
+        }
+        
+‏        .digital-paper {
+‏            background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><rect width="100" height="100" fill="%23f8f9fa" opacity="0.8"/><path d="M0,20 L100,20" stroke="%2308C7B1" stroke-width="0.3" stroke-dasharray="2,2"/><path d="M0,40 L100,40" stroke="%2308C7B1" stroke-width="0.3" stroke-dasharray="2,2"/><path d="M0,60 L100,60" stroke="%2308C7B1" stroke-width="0.3" stroke-dasharray="2,2"/><path d="M0,80 L100,80" stroke="%2308C7B1" stroke-width="0.3" stroke-dasharray="2,2"/></svg>');
+        }
+        
+‏        .persian-pattern {
+‏            background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 200 200"><path d="M20,20 C40,40 60,40 80,20" fill="none" stroke="%23FFD700" stroke-width="1"/><path d="M120,20 C140,40 160,40 180,20" fill="none" stroke="%23FFD700" stroke-width="1"/><path d="M20,120 C40,140 60,140 80,120" fill="none" stroke="%23FFD700" stroke-width="1"/><path d="M120,120 C140,140 160,140 180,120" fill="none" stroke="%23FFD700" stroke-width="1"/></svg>');
+‏            opacity: 0.08;
+‏            background-size: 200px;
+        }
+        
+‏        .timeline-item:before {
+‏            content: '';
+‏            position: absolute;
+‏            width: 20px;
+‏            height: 20px;
+‏            background: #08C7B1;
+‏            border: 3px solid #FFD700;
+‏            border-radius: 50%;
+‏            right: -10px;
+‏            top: 0;
+        }
+        
+‏        [dir="rtl"] .timeline-item:before {
+‏            right: auto;
+‏            left: -10px;
+        }
+        
+‏        .service-card:hover {
+‏            transform: translateY(-10px);
+‏            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+‏        .portfolio-overlay {
+‏            background: rgba(0, 107, 103, 0.9);
+        }
+        
+‏        .khatam-border {
+‏            border: 15px solid transparent;
+‏            border-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><rect x="0" y="0" width="100" height="100" fill="%23006B67"/><path d="M20,20 L40,20 L40,40 L20,40 Z" fill="%23FFD700"/><path d="M60,20 L80,20 L80,40 L60,40 Z" fill="%23FFD700"/><path d="M20,60 L40,60 L40,80 L20,80 Z" fill="%23FFD700"/><path d="M60,60 L80,60 L80,80 L60,80 Z" fill="%23FFD700"/></svg>') 30 round;
+        }
+        
+‏        /* RTL/LTR switching */
+‏        [dir="rtl"] .timeline-item-content {
+‏            text-align: right;
+‏            padding-right: 30px;
+‏            padding-left: 0;
+        }
+        
+‏        [dir="ltr"] .timeline-item-content {
+‏            text-align: left;
+‏            padding-left: 30px;
+‏            padding-right: 0;
+        }
+        
+‏        /* Language specific styles */
+‏        .lang-fa {
+‏            display: block;
+        }
+        
+‏        .lang-en {
+‏            display: none;
+        }
+        
+‏        [lang="en"] .lang-fa {
+‏            display: none;
+        }
+        
+‏        [lang="en"] .lang-en {
+‏            display: block;
+        }
+‏    </style>
+‏</head>
+‏<body class="bg-gray-50 digital-paper" lang="fa">
+‏    <!-- Language Toggle -->
+‏    <div class="fixed bottom-4 left-4 z-50">
+‏        <div class="bg-white rounded-full shadow-lg p-1 flex">
+‏            <button onclick="switchLanguage('fa')" class="w-10 h-10 rounded-full bg-[#08C7B1] text-white flex items-center justify-center mx-1">
+‏                🇮🇷
+‏            </button>
+‏            <button onclick="switchLanguage('en')" class="w-10 h-10 rounded-full bg-gray-100 text-gray-700 flex items-center justify-center mx-1">
+‏                🇬🇧
+‏            </button>
+‏        </div>
+‏    </div>
+
+‏    <!-- Navigation -->
+‏    <nav class="bg-white shadow-lg sticky top-0 z-50">
+‏        <div class="container mx-auto px-6 py-3">
+‏            <div class="flex justify-between items-center">
+‏                <div class="flex items-center">
+‏                    <div class="w-12 h-12 rounded-full bg-gradient-to-br from-[#08C7B1] to-[#006B67] flex items-center justify-center text-white font-bold text-xl">
+‏                        <span class="lang-fa">ش</span>
+‏                        <span class="lang-en">YN</span>
+‏                    </div>
+‏                    <span class="ml-3 text-xl font-semibold text-[#2D2D2D] lang-fa">[نام شما]</span>
+‏                    <span class="ml-3 text-xl font-semibold text-[#2D2D2D] lang-en">[Your Name]</span>
+‏                </div>
+‏                <div class="hidden md:flex space-x-8 space-x-reverse">
+‏                    <a href="#home" class="text-[#2D2D2D] hover:text-[#08C7B1] transition lang-fa">خانه</a>
+‏                    <a href="#home" class="text-[#2D2D2D] hover:text-[#08C7B1] transition lang-en">Home</a>
+                    
+‏                    <a href="#about" class="text-[#2D2D2D] hover:text-[#08C7B1] transition lang-fa">درباره من</a>
+‏                    <a href="#about" class="text-[#2D2D2D] hover:text-[#08C7B1] transition lang-en">About</a>
+                    
+‏                    <a href="#timeline" class="text-[#2D2D2D] hover:text-[#08C7B1] transition lang-fa">سوابق</a>
+‏                    <a href="#timeline" class="text-[#2D2D2D] hover:text-[#08C7B1] transition lang-en">Journey</a>
+                    
+‏                    <a href="#services" class="text-[#2D2D2D] hover:text-[#08C7B1] transition lang-fa">خدمات</a>
+‏                    <a href="#services" class="text-[#2D2D2D] hover:text-[#08C7B1] transition lang-en">Services</a>
+                    
+‏                    <a href="#contact" class="text-[#2D2D2D] hover:text-[#08C7B1] transition lang-fa">تماس</a>
+‏                    <a href="#contact" class="text-[#2D2D2D] hover:text-[#08C7B1] transition lang-en">Contact</a>
+‏                </div>
+‏                <button class="md:hidden focus:outline-none">
+‏                    <i class="fas fa-bars text-2xl text-[#2D2D2D]"></i>
+‏                </button>
+‏            </div>
+‏        </div>
+‏    </nav>
+
+‏    <!-- Hero Section -->
+‏    <section id="home" class="hero-gradient text-white relative overflow-hidden">
+‏        <div class="persian-pattern absolute inset-0"></div>
+‏        <div class="container mx-auto px-6 py-24 md:py-32 relative z-10">
+‏            <div class="flex flex-col md:flex-row items-center">
+‏                <div class="md:w-1/2 mb-12 md:mb-0">
+‏                    <h1 class="nastaliq text-4xl md:text-5xl mb-6 lang-fa">پل ارتباطی صنعت و نوآوری</h1>
+‏                    <h1 class="text-4xl md:text-6xl font-bold mb-6 lang-en">Bridging Industry & Innovation</h1>
+                    
+‏                    <p class="text-xl md:text-2xl mb-8 lang-fa">روش منحصربه‌فرد <span class="font-bold">[نام شما]</span></p>
+‏                    <p class="text-xl md:text-2xl mb-8 lang-en">The <span class="font-bold">[Your Name]</span> Method</p>
+                    
+‏                    <p class="text-lg mb-8 lang-fa">مهندس صنایع و مدیر عملیات متخصص در نمایشگاه‌های تجاری و رهبری اجرایی</p>
+‏                    <p class="text-lg mb-8 lang-en">Industrial Engineer & Operations Manager specializing in trade exhibitions and executive leadership.</p>
+                    
+‏                    <button class="bg-[#FFD700] text-[#2D2D2D] px-8 py-3 rounded-full font-semibold hover:bg-opacity-90 transition lang-fa">
+                        شروع همکاری
+‏                    </button>
+‏                    <button class="bg-[#FFD700] text-[#2D2D2D] px-8 py-3 rounded-full font-semibold hover:bg-opacity-90 transition lang-en">
+‏                        Start Collaboration
+‏                    </button>
+‏                </div>
+‏                <div class="md:w-1/2 relative">
+‏                    <div class="w-64 h-64 md:w-80 md:h-80 mx-auto bg-white bg-opacity-20 rounded-full overflow-hidden border-4 border-[#FFD700] relative">
+‏                        <img src="https://via.placeholder.com/400x400" alt="[Your Name]" class="w-full h-full object-cover">
+‏                        <div class="absolute inset-0 bg-[#006B67] opacity-20"></div>
+‏                    </div>
+‏                    <div class="absolute -bottom-10 -left-10 w-32 h-32 bg-[#FFD700] bg-opacity-20 rounded-full"></div>
+‏                    <div class="absolute -top-10 -right-10 w-24 h-24 bg-[#FFD700] bg-opacity-20 rounded-full"></div>
+‏                </div>
+‏            </div>
+
+‏</html>
